@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Space+Grotesk:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Space Grotesk', sans-serif;
+}
+[data-theme="light"] p,
+[data-theme="light"] h2,
+[data-theme="light"] svg:not(.svg1):not(.svg2):not(.svg3){
+    transition: 500ms;
+    color: black;
+}
+[data-theme="dark"] p,
+[data-theme="dark"] h2,
+[data-theme="dark"] svg:not(.svg1):not(.svg2):not(.svg3){
+    transition: 500ms;
+    color: white;
+}
+[data-theme="light"] span{
+    transition: 500ms;
+    color: white;
+}
+[data-theme="dark"] span{
+    transition: 500ms;
+    color: black;
+}
+[data-theme="light"]{
+    background-color: white;
+}
+[data-theme="dark"]{
+    background-color: black;
+}
+
+.reverse:nth-child(odd){
+    flex-direction: row-reverse;
+}
+@media (max-width: 1024px){
+    .reverse{
+        flex-direction: column;
+    }
+    .reverse:nth-child(odd){
+        flex-direction: column;
+    }
+}
+.fancy_border_radius{
+    border-radius: 44% 56% 64% 36% / 68% 38% 62% 32%;
+}
+.fancy_border_radius_2{
+    border-radius: 62% 38% 75% 25% / 56% 50% 50% 44%;
+}
