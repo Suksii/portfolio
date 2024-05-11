@@ -1,4 +1,4 @@
-# Rortfolio
+# Portfolio
 
 ### Portfolio project is a web project developed in React.
 
