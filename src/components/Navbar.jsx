@@ -37,27 +37,27 @@ const Navbar = ({scrollToSection}) => {
                 </div>
                 <div className="cursor-pointer mx-12 z-50" onClick={toggleTheme}>
                     {isDarkMode ? <IoMoonOutline size={30}/> :
-                        <IoSunnyOutline size={30} className='bg-white rounded-full'/>}
+                        <IoSunnyOutline size={30}/>}
                 </div>
                 <div className="p-3 cursor-pointer z-50" onClick={() => setToggle(!toggle)}>
-                    {toggle ? <IoClose size={30} className={!isDarkMode && "bg-white rounded-full"}/> : <HiOutlineMenuAlt3 size={30}/>}
+                    {toggle ? <IoClose size={30}/> : <HiOutlineMenuAlt3 size={30}/>}
                 </div>
             </div>
-            <div className={`md:hidden absolute bg-black w-full top-0 text-gray-300 left-0 right-0 ${toggle ? 'translate-y-0 opacity-100' : '-translate-y-[100vh] opacity-0'} flex justify-center items-center z-40 duration-500 flex-col`}>
-                {navItems.map((item, index) => (
-                    <div key={index}
-                         className='cursor-pointer py-[5rem] text-2xl duration-500 hover:bg-gray-800 hover:text-white w-full text-center'
-                         onClick={() => {
-                             setToggle(false)
-                             scrollToSection(item)
-                         }}>
-                        {item}
-                    </div>
-                ))}
+            <div className="relative">
+                <div className={`md:hidden absolute bg-black w-full top-0 text-gray-300 left-0 right-0 ${toggle ? 'translate-y-0 opacity-100' : '-translate-y-[100vh] opacity-0'} flex justify-center items-center z-40 duration-500 flex-col`}>
+                    {navItems.map((item, index) => (
+                        <div key={index}
+                             className='cursor-pointer py-[5rem] text-2xl duration-500 hover:bg-gray-800 hover:text-white w-full text-center'
+                             onClick={() => {
+                                 setToggle(false)
+                                 scrollToSection(item)
+                             }}>
+                            {item}
+                        </div>
+                    ))}
+                </div>
             </div>
         </>
-
     );
 };
-
 export default Navbar;
