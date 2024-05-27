@@ -26,6 +26,7 @@ const Projects = ({handleOpen}) => {
                 'Javascript'
             ],
             description: <p>This React.js web application showcases various religious objects across different regions in Montenegro, developed based on Government requirements. Users can explore sites through an intuitive, region-based navigation system.<br/>Key features include displaying religious objects by region, dynamic pages for each region and object, an interactive map, and image sliders. The application supports smooth scrolling and interval-based functionalities.<br/>Technologies used include JavaScript for core functionalities, React for building the user interface with useState, React Router DOM for routing, and SASS for styling.<br/>Navigate to the home page to view regions, click on a region to see its religious objects, and click on an object to view detailed information and images in a slider format.</p>,
+            url: 'http://vjerskiobjekticg.online/',
             image: ReligiousObjectImg,
             github: 'https://github.com/Suksii/religious-objects'
         },
@@ -88,5 +89,4 @@ const Projects = ({handleOpen}) => {
         </div>
     );
 };
-
 export default Projects;
