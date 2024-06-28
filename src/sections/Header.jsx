@@ -31,7 +31,7 @@ const Header = ({handleOpen, scrollToSection }) => {
                 <h2 className="text-5xl leading-7">Šućo Ramović</h2>
             </div>
             <div className="flex justify-center gap-[6vw] items-center md:flex-row flex-col relative">
-                    <p className="text-3xl font-semibold text-center">Electrical Engineer</p>
+                <p className="text-3xl font-semibold text-center">Frontend Developer</p>
                 <div className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] relative rounded-full">
                     <img src={Suco} alt={"Suco"} className="absolute w-full fancy_border_radius object-cover h-full z-30" />
                     <div className="absolute bottom-1 left-4 bg-gray-300 bg-opacity-80 h-full w-full fancy_border_radius_2"></div>
@@ -44,7 +44,7 @@ const Header = ({handleOpen, scrollToSection }) => {
                                 onClick={() => handleOpen("https://me.linkedin.com/in/%C5%A1u%C4%87o-ramovi%C4%87-58a728256")}
                     />
                 </div>
-                    <p className="text-3xl font-semibold text-center">Frontend Developer</p>
+                <p className="text-3xl font-semibold text-center">Electrical Engineer</p>
             </div>
             <div className="flex justify-center gap-10">
                 <button className={`button1 flex items-center gap-1 border-t-2 ${isDarkMode ? 'bg-white hover:border-white hover:bg-black hover:text-white' : 'hover:border-black hover:bg-white hover:text-black bg-black text-white'} min-w-[150px] px-4 py-2 rounded-full mt-10 duration-500 uppercase font-semibold`} onClick={() => scrollToSection('Contact')}>
