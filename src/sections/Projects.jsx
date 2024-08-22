@@ -4,6 +4,7 @@ import {useTheme} from "../context/ThemeContext.jsx";
 import ReligiousObjectImg from '../assets/religious-objects/religious-objects_region-page.png';
 import TaskProjectImg from '../assets/task-project/task-project_admin-page.png';
 import MoviesTvShowsImg from '../assets/movie-tvshow/movie-tvshow_tvshow-page.png';
+import RentACarImg from '../assets/rentacar/rentacar-admin-homepage.png';
 
 const Projects = ({handleOpen}) => {
 
@@ -40,6 +41,20 @@ const Projects = ({handleOpen}) => {
             url: '',
             image: TaskProjectImg,
             github: 'https://github.com/Suksii/task-project'
+        },
+        {
+            title: 'Rent a Car Project',
+            subtitles: [
+                'React',
+                'Javascript',
+                'Node.js',
+                'Express',
+                'MongoDB'
+            ],
+            description: <p>Rent a Car Project is a full-stack application that allows users to rent cars. The front-end is built using React.js, while the back-end is powered by Node.js, Express, and MongoDB. Key features include user authentication, car rental, and user profile management. The application also includes a car management system for administrators, with functionalities for adding, updating, and deleting cars.</p>,
+            url: '',
+            image: RentACarImg,
+            github: 'https://github.com/Suksii/rentacar'
         }
     ]
 
