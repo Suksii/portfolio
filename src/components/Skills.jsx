@@ -2,12 +2,14 @@ import React from 'react';
 import HTML5 from '../assets/html5.png';
 import CSS3 from '../assets/css3.jpg';
 import JS from '../assets/js.svg';
+import TS from '../assets/typescript.png';
 import ReactJS from '../assets/react.svg';
 import NodeJS from '../assets/node-js.svg';
 import git from '../assets/git.svg';
 import SASS from '../assets/sass.svg';
 import Tailwind from '../assets/tailwind.svg';
 import MySQL from '../assets/MySQL.svg';
+import mongoDB from '../assets/mongoDB.png';
 import {useTheme} from "../context/ThemeContext.jsx";
 import {motion} from "framer-motion";
 
@@ -25,6 +27,10 @@ const Skills = () => {
         {
             name: 'JavaScript',
             image: JS
+        },
+        {
+            name: 'TypeScript',
+            image: TS
         },
         {
             name: 'ReactJS',
@@ -49,10 +55,14 @@ const Skills = () => {
         {
             name: 'MySQL',
             image: MySQL
+        },
+        {
+            name: 'MongoDB',
+            image: mongoDB
         }
     ]
 
-    const otherSkills = ['C', 'C++', 'MATLAB', 'NextJS', 'Vue', 'Linux', 'Arduino'];
+    const otherSkills = ['C', 'C++', 'MATLAB', 'NextJS', 'Linux', 'Arduino'];
 
     const { isDarkMode } = useTheme();
 
