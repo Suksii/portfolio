@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BsArrowRight } from "react-icons/bs";
 import {useTheme} from "../context/ThemeContext.jsx";
 import ReligiousObjectImg from '../assets/religious-objects/religious-objects_region-page.png';
@@ -6,6 +6,7 @@ import TaskProjectImg from '../assets/task-project/task-project_admin-page.png';
 import MoviesTvShowsImg from '../assets/movie-tvshow/movie-tvshow_tvshow-page.png';
 import RentACarImg from '../assets/rentacar/rentacar-admin-homepage.png';
 import ChatAppImg from '../assets/chat-app/chat-app_home-page.png';
+import FoodOrderingImg from '../assets/food-ordering/food-ordering-categories.png';
 
 const Projects = ({handleOpen}) => {
 
@@ -23,6 +24,7 @@ const Projects = ({handleOpen}) => {
             url: '',
             image: RentACarImg,
             github: 'https://github.com/Suksii/rentacar'
+            
         },
         {
             title: 'Chat App',
@@ -39,6 +41,20 @@ const Projects = ({handleOpen}) => {
             image: ChatAppImg,
             github: 'https://github.com/Suksii/chat-app'
         },
+        {
+            title: 'Food ordering',
+            subtitles: [
+                'Next.js',
+                'Typescript',
+                'PostgreSQL',
+                'Prisma'
+            ],
+            description: <p>This project is a full stack Next.js and Typescript application designed to facilitate the ordering of food and drinks.<br/>PostgreSQL is employed as the primary database, while Prisma serves as the ORM, ensuring efficient database management and migration.<br/>User Authentication is implemented using NextAuth.<br/>The application allows users to login via Google or Facebook provider, browse menu, List featured products and use cart and order products.<br/>Administrators have the same ability as users, additionaly they can add or delete products and see orders and change their status.<br/></p>,
+            url: '',
+            image: FoodOrderingImg,
+            github: 'https://github.com/Suksii/food-ordering-app'
+        },
+        
         {
             title: 'Movie & TV Shows',
             subtitles: [
@@ -75,13 +91,18 @@ const Projects = ({handleOpen}) => {
     ]
 
     const { isDarkMode } = useTheme();
+    const [visibleProjects, setVisibleProjects] = useState(3)
+
+    const handleShowMore = () => {
+        setVisibleProjects(prevProjects => prevProjects + 3)
+    }
 
     return (
         <div className="py-2 md:py-10">
             <h2 className="text-4xl flex justify-center">Projects</h2>
             <div className="flex flex-col w-full md:w-[80%] mx-auto">
                 {
-                    projects.map((project, index) => (
+                    projects.slice(0, visibleProjects).map((project, index) => (
                         <div key={index} className={`flex justify-evenly reverse ${isDarkMode ? 'border' : 'shadow-md md:shadow-2xl' } md:rounded-3xl min-h-[400px] my-10 md:px-6`}>
                             <div  style={{flex: 1}} className="flex flex-col justify-between p-5">
                                 <div>
@@ -95,7 +116,7 @@ const Projects = ({handleOpen}) => {
                                             ))
                                         }
                                     </div>
-                                    <p className="py-3 text-xl md:text-base xl:text-lg">{project.description}</p>
+                                    <div className="py-3 text-xl md:text-base xl:text-lg">{project.description}</div>
                                 </div>
                                 <div className="flex justify-between">
                                     <div onClick={() => handleOpen(project.github)}
@@ -117,6 +138,11 @@ const Projects = ({handleOpen}) => {
                     ))
                 }
             </div>
+            {visibleProjects < projects.length && (
+                <div className="flex justify-center">
+                    <button className={`${isDarkMode ? 'bg-white text-black hover:border-white hover:bg-black hover:text-white' : ' bg-black text-white hover:border-black hover:bg-white hover:text-black'} font-semibold border px-5 py-2 rounded-full duration-500`} onClick={handleShowMore}>View More</button>
+                </div>
+            )}
         </div>
     );
 };

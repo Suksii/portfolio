@@ -39,7 +39,7 @@ const About = () => {
                     ))
                 }
             </div>
-            <h2 className="w-[90%]  mx-auto md:w-1/2 md:py-12">
+            <h2 className="w-[90%] mx-auto md:w-1/2 md:py-12">
                     {renderContent()}
             </h2>
         </div>

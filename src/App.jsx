@@ -8,6 +8,9 @@ import {useRef} from "react";
 import {FaArrowUp} from "react-icons/fa6";
 import Footer from "./components/Footer.jsx";
 import {useTheme} from "./context/ThemeContext.jsx";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
 
     const sectionRefs = {
@@ -50,6 +53,12 @@ function App() {
             </button>
             <Footer handleOpen={handleOpen}/>
         </div>
+        <ToastContainer position={"top-center"}
+                            autoClose={1000}
+                            closeOnClick
+                            closeButton={false}
+                            limit={1}
+            />
     </>
   )
 }
