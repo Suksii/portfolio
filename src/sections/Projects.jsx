@@ -7,6 +7,7 @@ import MoviesTvShowsImg from '../assets/movie-tvshow/movie-tvshow_tvshow-page.pn
 import RentACarImg from '../assets/rentacar/rentacar-admin-homepage.png';
 import ChatAppImg from '../assets/chat-app/chat-app_home-page.png';
 import FoodOrderingImg from '../assets/food-ordering/food-ordering-categories.png';
+import WeatherAppImg from '../assets/weather-app/weather-app-hourly.png'
 
 const Projects = ({handleOpen}) => {
 
@@ -54,7 +55,17 @@ const Projects = ({handleOpen}) => {
             image: FoodOrderingImg,
             github: 'https://github.com/Suksii/food-ordering-app'
         },
-        
+        {
+            title: 'Weather App',
+            subtitles: [
+                'Vue',
+                'Javascript'
+            ],
+            description: <p>Weather App is a Vue.js application that provides weather forecast using Firebase. It includes three pages: Daily Weather, Hourly Weather and Monthly Weather. Users can search for weather by city. The app uses Vuex for state management and Firebase as the real-time database. Pictures are stored in Firebase Storage.</p>,
+            url: '',
+            image: WeatherAppImg,
+            github: 'https://github.com/Suksii/weather-app'
+        },
         {
             title: 'Movie & TV Shows',
             subtitles: [
@@ -91,7 +102,7 @@ const Projects = ({handleOpen}) => {
     ]
 
     const { isDarkMode } = useTheme();
-    const [visibleProjects, setVisibleProjects] = useState(3)
+    const [visibleProjects, setVisibleProjects] = useState(3);
 
     const handleShowMore = () => {
         setVisibleProjects(prevProjects => prevProjects + 3)
