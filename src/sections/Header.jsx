@@ -8,7 +8,7 @@ const Header = ({handleOpen, scrollToSection }) => {
 
     const { isDarkMode } = useTheme();
     function downloadPDF() {
-        const url = 'https://suksii.github.io/portfolio/CV.pdf';
+        const url = 'https://suksii.github.io/portfolio/CV2025.pdf';
         const fileName = url.split('/').pop();
         fetch(url)
             .then(response => response.blob())
