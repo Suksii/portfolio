@@ -8,6 +8,7 @@ import NodeJS from '../assets/node-js.svg';
 import git from '../assets/git.svg';
 import SASS from '../assets/sass.svg';
 import Tailwind from '../assets/tailwind.svg';
+import VueJs from '../assets/Vuejs.png'
 import MySQL from '../assets/MySQL.svg';
 import mongoDB from '../assets/mongoDB.png';
 import {useTheme} from "../context/ThemeContext.jsx";
@@ -35,6 +36,10 @@ const Skills = () => {
         {
             name: 'ReactJS',
             image: ReactJS
+        },
+        {
+            name: 'Vue.js',
+            image: VueJs
         },
         {
             name: 'NodeJS',
