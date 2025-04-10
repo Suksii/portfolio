@@ -34,10 +34,12 @@ const MyStory = () => {
       </p>
       <p className="text-center md:text-start leading-8 text-lg pt-5">
         I am a self-taught developer and I am constantly learning new things. I
-        am currently working as a freelance web developer and I am looking for a
-        job as a mid-level web developer. I always strive to improve my skills
-        and I am always ready to learn new technologies. I am a very responsible
-        person and I always try to do my best in every project I work on.
+        am currently working as a Software Engineer at the national television
+        station RTCG. I also work as a freelance web developer and I am looking
+        for a full time job as a mid-level web developer. I always strive to
+        improve my skills and I am always ready to learn new technologies. I am
+        a very responsible person and I always try to do my best in every
+        project I work on.
       </p>
     </>
   );
