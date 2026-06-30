@@ -9,7 +9,12 @@ import git from '../assets/git.svg';
 import SASS from '../assets/sass.svg';
 import Tailwind from '../assets/tailwind.svg';
 import VueJs from '../assets/Vuejs.png'
+import NextJS from '../assets/nextjs.svg';
+import Express from '../assets/express.svg';
+import PHP from '../assets/php.svg';
+import Laravel from '../assets/laravel.svg';
 import MySQL from '../assets/MySQL.svg';
+import PostgreSQL from '../assets/postgresql.svg';
 import mongoDB from '../assets/mongoDB.png';
 import {useTheme} from "../context/ThemeContext.jsx";
 import {motion} from "framer-motion";
@@ -42,8 +47,24 @@ const Skills = () => {
             image: VueJs
         },
         {
+            name: 'Next.js',
+            image: NextJS
+        },
+        {
             name: 'NodeJS',
             image: NodeJS
+        },
+        {
+            name: 'Express',
+            image: Express
+        },
+        {
+            name: 'PHP',
+            image: PHP
+        },
+        {
+            name: 'Laravel',
+            image: Laravel
         },
         {
             name: 'Git',
@@ -62,12 +83,16 @@ const Skills = () => {
             image: MySQL
         },
         {
+            name: 'PostgreSQL',
+            image: PostgreSQL
+        },
+        {
             name: 'MongoDB',
             image: mongoDB
         }
     ]
 
-    const otherSkills = ['C', 'C++', 'MATLAB', 'NextJS', 'Linux', 'Arduino'];
+    const otherSkills = ['C', 'C++', 'MATLAB', 'Linux', 'Arduino'];
 
     const { isDarkMode } = useTheme();
 

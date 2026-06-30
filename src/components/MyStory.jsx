@@ -33,13 +33,18 @@ const MyStory = () => {
         with it.
       </p>
       <p className="text-center md:text-start leading-8 text-lg pt-5">
-        I am a self-taught developer and I am constantly learning new things. I
-        am currently working as a Software Engineer at the national television
-        station RTCG. I also work as a freelance web developer and I am looking
-        for a full time job as a mid-level web developer. I always strive to
-        improve my skills and I am always ready to learn new technologies. I am
-        a very responsible person and I always try to do my best in every
-        project I work on.
+        I am a self-taught developer and I am constantly learning new things.
+        Today I work full-time as a Web Developer at Data Design, where I build
+        and maintain a range of production web applications — from e-commerce
+        storefronts to a large multi-module ERP system — using technologies such
+        as React, Next.js, TypeScript, Node.js and PHP/Laravel. Before that I
+        spent years as an engineer at the national television station RTCG,
+        where I also started building internal web applications.
+      </p>
+      <p className="text-center md:text-start leading-8 text-lg pt-5">
+        I always strive to improve my skills and I am always ready to learn new
+        technologies. I am a very responsible person and I always try to do my
+        best in every project I work on.
       </p>
     </>
   );

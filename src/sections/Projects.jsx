@@ -1,16 +1,120 @@
 import React, { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { useTheme } from "../context/ThemeContext.jsx";
-import ReligiousObjectImg from "../assets/religious-objects/religious-objects_region-page.png";
-import MoviesTvShowsImg from "../assets/movie-tvshow/movie-tvshow_tvshow-page.png";
-import CinemaImg from "../assets/movies-vue/cinema-app.png";
-import RentACarImg from "../assets/rentacar/rentacar-admin-homepage.png";
-import ChatAppImg from "../assets/chat-app/chat-app_home-page.png";
-import FoodOrderingImg from "../assets/food-ordering/food-ordering-categories.png";
-import WeatherAppImg from "../assets/weather-app/weather-app-hourly.png";
+import KsportImg from "../assets/ksport/ksport.webp";
+import BusTicketImg from "../assets/busticket/busticket.webp";
+import LevelUpImg from "../assets/levelup/levelup.webp";
+import TimePlusImg from "../assets/timeplus/timeplus.webp";
+import RentACarImg from "../assets/rentacar/rentacar-admin-homepage.webp";
+import ChatAppImg from "../assets/chat-app/chat-app_home-page.webp";
+import FoodOrderingImg from "../assets/food-ordering/food-ordering-categories.webp";
 
 const Projects = ({ handleOpen }) => {
   const projects = [
+    {
+      title: "Ksport",
+      subtitles: ["Next.js", "React", "TypeScript", "TailwindCSS", "REST API"],
+      description: (
+        <p>
+          Ksport is a modern, headless e-commerce storefront for a sportswear
+          retailer, built with Next.js, TypeScript and TailwindCSS on top of a
+          Laravel REST API.
+          <br />
+          It features a full product catalog with categories, brands and
+          advanced search, cart and checkout with online payment, a wishlist,
+          user accounts with order history and a store locator.
+          <br />
+          Built with server-side rendering for performance and SEO, and TanStack
+          Query for efficient data fetching and caching.
+        </p>
+      ),
+      url: "https://new.k-sport.me",
+      image: KsportImg,
+      github: "",
+    },
+    {
+      title: "BusTicket",
+      subtitles: ["Next.js", "TypeScript", "TailwindCSS", "i18n"],
+      description: (
+        <p>
+          BusTicket is an online bus-ticket booking platform built with Next.js
+          and TypeScript, available in 15 languages via next-intl.
+          <br />
+          Users can search bus routes, select seats and pay online or offline,
+          view and manage their ticket history, verify return tickets and even
+          rent a bus.
+          <br />
+          The platform also includes blogs, an FAQ and an integrated AI chatbot,
+          with Google OAuth, reCAPTCHA and online payment integrations.
+        </p>
+      ),
+      url: "https://prod-new.busticket4.me",
+      image: BusTicketImg,
+      github: "",
+    },
+    {
+      title: "LevelUp",
+      subtitles: ["PHP", "JavaScript", "SASS", "E-commerce"],
+      description: (
+        <p>
+          LevelUp is an e-commerce storefront built on a custom PHP platform.
+          <br />
+          It includes a full product catalog with categories and brands, cart
+          and checkout, wishlist, blog, multi-language support and shipping,
+          email and payment integrations.
+          <br />
+          I worked on building and maintaining the store, including a full UI
+          redesign with new, responsive styling.
+        </p>
+      ),
+      url: "https://level-up.me",
+      image: LevelUpImg,
+      github: "",
+    },
+    {
+      title: "TimePlus",
+      subtitles: ["PHP", "JavaScript", "SASS", "E-commerce"],
+      description: (
+        <p>
+          TimePlus is an online store for watches and jewelry, built on a custom
+          PHP e-commerce platform.
+          <br />
+          It offers a full product catalog, cart and checkout, wishlist, blog,
+          multi-language support and shipping, email and payment integrations.
+          <br />
+          I handled development and maintenance of the store, including a
+          complete responsive UI redesign.
+        </p>
+      ),
+      url: "https://timeplus.me",
+      image: TimePlusImg,
+      github: "",
+    },
+    {
+      title: "Food ordering",
+      subtitles: ["Next.js", "Typescript", "PostgreSQL", "Prisma"],
+      description: (
+        <p>
+          This project is a full stack Next.js and Typescript application
+          designed to facilitate the ordering of food and drinks.
+          <br />
+          PostgreSQL is employed as the primary database, while Prisma serves as
+          the ORM, ensuring efficient database management and migration.
+          <br />
+          User Authentication is implemented using NextAuth.
+          <br />
+          The application allows users to login via Google or Facebook provider,
+          browse menu, List featured products and use cart and order products.
+          <br />
+          Administrators have the same ability as users, additionaly they can
+          add or delete products and see orders and change their status.
+          <br />
+        </p>
+      ),
+      url: "",
+      image: FoodOrderingImg,
+      github: "https://github.com/Suksii/food-ordering-app",
+    },
     {
       title: "Rent a Car Project",
       subtitles: ["React", "Javascript", "Node.js", "Express", "MongoDB"],
@@ -49,70 +153,6 @@ const Projects = ({ handleOpen }) => {
       url: "",
       image: ChatAppImg,
       github: "https://github.com/Suksii/chat-app",
-    },
-    {
-      title: "Food ordering",
-      subtitles: ["Next.js", "Typescript", "PostgreSQL", "Prisma"],
-      description: (
-        <p>
-          This project is a full stack Next.js and Typescript application
-          designed to facilitate the ordering of food and drinks.
-          <br />
-          PostgreSQL is employed as the primary database, while Prisma serves as
-          the ORM, ensuring efficient database management and migration.
-          <br />
-          User Authentication is implemented using NextAuth.
-          <br />
-          The application allows users to login via Google or Facebook provider,
-          browse menu, List featured products and use cart and order products.
-          <br />
-          Administrators have the same ability as users, additionaly they can
-          add or delete products and see orders and change their status.
-          <br />
-        </p>
-      ),
-      url: "",
-      image: FoodOrderingImg,
-      github: "https://github.com/Suksii/food-ordering-app",
-    },
-    {
-      title: "Cinema App",
-      subtitles: ["Vue", "Javascript"],
-      description: (
-        <p>
-          Cinema App is a web project developed in Vue.js that fetches data from
-          TMDB API. Users can search for movies by name or category, and sort
-          the results by vote count, popularity, title, or release date in both
-          ascending and descending order. <br />
-          The app features:
-          <br />- A custom slider showcasing upcoming, popular, and top-rated
-          movies
-          <br />- A modal for selecting movie categories
-          <br />- A custom loading component for a smoother user experience
-          <br />- A useDebounce composable to improve search and pagination
-          performance
-          <br />- Pinia for state management
-        </p>
-      ),
-      url: "",
-      image: CinemaImg,
-      github: "https://github.com/Suksii/cinema-vue",
-    },
-    {
-      title: "Weather App",
-      subtitles: ["Vue", "Javascript"],
-      description: (
-        <p>
-          Weather App is a Vue.js application that provides weather forecast
-          using Firebase. It includes three pages: Daily Weather, Hourly Weather
-          and Monthly Weather. Users can search for weather by city. The app
-          uses Vuex for state management and Firebase as the real-time database.
-          Pictures are stored in Firebase Storage.
-        </p>
-      ),
-      url: "",
-      image: WeatherAppImg,
-      github: "https://github.com/Suksii/weather-app",
     },
     // {
     //   title: "Movie & TV Shows",
@@ -213,13 +253,15 @@ const Projects = ({ handleOpen }) => {
                 </div>
               </div>
               <div className="flex justify-between">
-                <div
-                  onClick={() => handleOpen(project.github)}
-                  className="flex items-center gap-2 cursor-pointer hover:translate-x-1 duration-200"
-                >
-                  <p>Github</p>
-                  <BsArrowRight />
-                </div>
+                {project.github && (
+                  <div
+                    onClick={() => handleOpen(project.github)}
+                    className="flex items-center gap-2 cursor-pointer hover:translate-x-1 duration-200"
+                  >
+                    <p>Github</p>
+                    <BsArrowRight />
+                  </div>
+                )}
                 {project.url && (
                   <div
                     className="flex items-center gap-2 cursor-pointer hover:translate-x-1 duration-200"
