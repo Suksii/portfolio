@@ -48,7 +48,7 @@ const Projects = ({ handleOpen }) => {
           with Google OAuth, reCAPTCHA and online payment integrations.
         </p>
       ),
-      url: "https://prod-new.busticket4.me",
+      url: "https://busticket4.me",
       image: BusTicketImg,
       github: "",
     },
