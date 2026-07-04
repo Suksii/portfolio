@@ -28,7 +28,7 @@ const Projects = ({ handleOpen }) => {
           Query for efficient data fetching and caching.
         </p>
       ),
-      url: "https://new.k-sport.me",
+      url: "https://k-sport.me",
       image: KsportImg,
       github: "",
     },
@@ -62,9 +62,8 @@ const Projects = ({ handleOpen }) => {
           It includes a full product catalog with categories and brands, cart
           and checkout, wishlist, blog, multi-language support and shipping,
           email and payment integrations.
-          <br />
-          I worked on building and maintaining the store, including a full UI
-          redesign with new, responsive styling.
+          <br />I worked on building and maintaining the store, including a full
+          UI redesign with new, responsive styling.
         </p>
       ),
       url: "https://level-up.me",
@@ -81,8 +80,7 @@ const Projects = ({ handleOpen }) => {
           <br />
           It offers a full product catalog, cart and checkout, wishlist, blog,
           multi-language support and shipping, email and payment integrations.
-          <br />
-          I handled development and maintenance of the store, including a
+          <br />I handled development and maintenance of the store, including a
           complete responsive UI redesign.
         </p>
       ),
